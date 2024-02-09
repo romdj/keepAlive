@@ -17,6 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up apt dependencies
+        run: sudo apt-get install -y libx11-dev
+
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
